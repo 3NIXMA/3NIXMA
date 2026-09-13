@@ -1,163 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devon Clark | Portfolio</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050505" />
+  <title>3NIXMA — Corrected Brand Palette Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #f6f3ea;
-      --surface: #fffdfa;
-      --text: #1f1d19;
-      --muted: #67625b;
-      --accent: #01696f;
-      --accent-dark: #0f3638;
-      --border: #ddd7cb;
+    /* 3NIXMA / Corrected palette roles
+       Obsidian: deepest black foundation
+       Emberghost: charcoal surface / industrial depth
+       Witchwine: deep plum, interior/private/art atmosphere
+       Crywave: teal signal, technical precision, action
+       Clay Sigil: earthen material, restoration, built work */
+    :root{
+      --obsidian:#050505;
+      --emberghost:#2D2E31;
+      --witchwine:#34112E;
+      --witchwine-deep:#21091D;
+      --crywave:#2BB9AE;
+      --crywave-light:#8BE5DD;
+      --clay-sigil:#A66B56;
+      --ash:#F1ECE5;
+      --ash-dark:#CFC6BC;
+      --line:3px solid var(--obsidian);
+      --light-line:3px solid var(--ash);
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.6;
-    }
-
-    main {
-      width: min(960px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 64px 0;
-    }
-
-    .label {
-      display: inline-block;
-      margin-bottom: 16px;
-      padding: 8px 12px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: var(--surface);
-      color: var(--muted);
-      font-size: 14px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      max-width: 10ch;
-      margin-bottom: 18px;
-      font-size: clamp(48px, 8vw, 96px);
-      line-height: 0.95;
-    }
-
-    .intro {
-      max-width: 60ch;
-      margin-bottom: 28px;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 14px 20px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .button:hover {
-      background: var(--accent-dark);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 64px;
-    }
-
-    .card {
-      padding: 24px;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background: var(--surface);
-    }
-
-    .card h2 {
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-
-    .card p {
-      color: var(--muted);
-    }
-
-    footer {
-      margin-top: 64px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    @media (max-width: 700px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      main {
-        padding: 40px 0;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <main>
-    <span class="label">Portfolio · In Progress</span>
-
-    <h1>Devon Clark builds, creates, and learns in public.</h1>
-
-    <p class="intro">
-      This is my first live website published with GitHub Pages - and I am just getting started
-      I am building a portfolio around cloud architecture, creative projects,
-      entrepreneurship, and the work I want to bring into the world.
-    </p>
-
-    <a class="button" href="#projects">View My Projects</a>
-
-    <section class="grid" id="projects">
-      <article class="card">
-        <h2>Cloud</h2>
-        <p>My progress toward Azure, AWS, and Google Cloud certifications.</p>
-      </article>
-
-      <article class="card">
-        <h2>Creative Work</h2>
-        <p>3D printing, sculpture, abstract art, and visual experiments.</p>
-      </article>
-
-      <article class="card">
-        <h2>Business</h2>
-        <p>Projects focused on creating sustainable income and useful services.</p>
-      </article>
-    </section>
-
-    <footer>
-      Built by Devon Clark and published with GitHub Pages.
-    </footer>
-  </main>
-</body>
-</html>
+    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth} body{font-family:"Space Grotesk",Arial,sans-serif;background:var(--obsidian);color:var(--ash);line-height:1.5;overflow-x:hidden} a{color:inherit;text-decoration:none}button{font:inherit}
+    .skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:100;background:var(--crywave);color:var(--obsidian);padding:12px;border:var(--line)}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(5,5,5,.95);backdrop-filter:blur(12px);border-bottom:var(--light-line)}.header-inner{width:min(1440px,100%);margin:auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:20px}.wordmark{font:600 13px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;color:var(--crywave-light)}.nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}.nav a{font:600 12px/1 "IBM Plex Mono",monospace;text-transform:uppercase;padding:8px 0;border-bottom:2px solid transparent}.nav a:hover{border-color:var(--crywave)}.menu-btn{display:none;border:var(--light-line);background:var(--crywave);color:var(--obsidian);padding:9px 12px;font:600 12px/1 "IBM Plex Mono",monospace;text-transform:uppercase}
+    .page{width:min(1440px,100%);margin:auto}.hero{min-height:calc(100svh - 54px);display:grid;grid-template-columns:43% 57%;border-bottom:var(--light-line)}.hero-copy{padding:clamp(26px,4vw,66px) clamp(18px,3vw,48px);display:flex;flex-direction:column;justify-content:space-between;border-right:var(--light-line);background:var(--obsidian)}.micro{font:600 12px/1.35 "IBM Plex Mono",monospace;letter-spacing:.04em;text-transform:uppercase;color:var(--crywave-light)}
+    .hero h1{margin:40px 0 22px;font-family:"Archivo Black",Impact,sans-serif;font-size:clamp(66px,9.2vw,157px);line-height:.73;letter-spacing:-.105em;text-transform:uppercase;max-width:7.8ch;color:var(--ash)}.hero h1 span{display:block}.hero h1 span:nth-child(2){color:var(--crywave)}.hero h1 span:nth-child(4){color:var(--clay-sigil)}.hero p{font:500 clamp(15px,1.35vw,19px)/1.45 "IBM Plex Mono",monospace;max-width:37ch;color:var(--ash)}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 17px;border:var(--light-line);background:transparent;color:var(--ash);font:700 12px/1 "IBM Plex Mono",monospace;text-transform:uppercase;box-shadow:4px 4px 0 var(--crywave);transition:transform .18s ease,box-shadow .18s ease}.btn:hover{transform:translate(4px,4px);box-shadow:none}.btn-primary{background:var(--crywave);border-color:var(--crywave);color:var(--obsidian);box-shadow:4px 4px 0 var(--ash)}
+    .hero-visual{position:relative;overflow:hidden;min-height:600px;background:var(--witchwine);isolation:isolate}.hero-visual::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(139,229,221,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(139,229,221,.14) 1px,transparent 1px);background-size:52px 52px;opacity:.42;mask-image:linear-gradient(180deg,#000,transparent 90%)}.hero-visual::after{content:"";position:absolute;left:0;right:0;bottom:0;height:36%;background:linear-gradient(180deg,transparent,var(--witchwine-deep));z-index:0}
+    .hero-visual .sun{position:absolute;width:clamp(180px,27vw,390px);aspect-ratio:1;right:7%;top:9%;border-radius:50%;background:var(--crywave);box-shadow:0 0 0 18px var(--obsidian),0 0 0 21px var(--clay-sigil);z-index:1}.hero-visual .sun::after{content:"3NIXMA";position:absolute;inset:50%;transform:translate(-50%,-50%) rotate(-17deg);color:var(--obsidian);font-family:"Archivo Black",sans-serif;font-size:clamp(42px,7vw,112px);letter-spacing:-.1em;white-space:nowrap}.hero-visual .big-letter{position:absolute;left:-.1em;bottom:-.16em;color:var(--clay-sigil);font-family:"Archivo Black",sans-serif;font-size:clamp(250px,46vw,700px);line-height:.7;letter-spacing:-.18em;opacity:.92;z-index:1}.hero-visual .signal{position:absolute;right:9%;bottom:18%;width:55%;border-top:3px solid var(--crywave-light);transform:rotate(-10deg);transform-origin:right;animation:beam 7s ease-in-out infinite;z-index:2}.hero-visual .signal::before,.hero-visual .signal::after{content:"";position:absolute;right:0;width:100%;border-top:3px solid var(--crywave-light)}.hero-visual .signal::before{top:-36px;opacity:.7}.hero-visual .signal::after{top:36px;opacity:.42}@keyframes beam{0%,100%{transform:rotate(-14deg) scaleX(.88);opacity:.55}50%{transform:rotate(-5deg) scaleX(1.05);opacity:1}}.hero-stamp{position:absolute;right:20px;bottom:20px;z-index:3;max-width:290px;padding:14px;background:var(--ash);color:var(--obsidian);border:var(--line);box-shadow:5px 5px 0 var(--clay-sigil);font:500 12px/1.5 "IBM Plex Mono",monospace}
+    .ticker{overflow:hidden;border-bottom:var(--light-line);background:var(--crywave);color:var(--obsidian);white-space:nowrap;font-family:"Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.03em;font-size:clamp(21px,3vw,42px);line-height:1}.ticker span{display:inline-block;padding:13px 0;animation:ticker 22s linear infinite}@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    section{border-bottom:var(--light-line)}.section-intro{display:grid;grid-template-columns:28% 72%;background:var(--ash);color:var(--obsidian)}.section-label{padding:22px 18px;border-right:var(--line);background:var(--clay-sigil);font:600 12px/1.5 "IBM Plex Mono",monospace;text-transform:uppercase}.section-title{padding:clamp(28px,4vw,60px) clamp(18px,4vw,64px)}.section-title h2{font-family:"Archivo Black",sans-serif;font-size:clamp(46px,7vw,110px);line-height:.76;letter-spacing:-.1em;text-transform:uppercase;max-width:10ch}.section-title p{max-width:58ch;margin-top:28px;font:500 15px/1.55 "IBM Plex Mono",monospace}
+    .archive{display:grid;grid-template-columns:repeat(2,1fr)}.archive-card{min-height:400px;padding:22px;border-right:var(--light-line);border-bottom:var(--light-line);display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.archive-card:nth-child(2n){border-right:0}.archive-card:nth-child(1){background:var(--clay-sigil);color:var(--obsidian)}.archive-card:nth-child(2){background:var(--witchwine);color:var(--ash)}.archive-card:nth-child(3){background:var(--crywave);color:var(--obsidian)}.archive-card:nth-child(4){background:var(--emberghost);color:var(--ash)}.archive-number{font:600 12px/1 "IBM Plex Mono",monospace}.archive-card h3{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:clamp(45px,5.6vw,90px);line-height:.76;letter-spacing:-.105em;max-width:8ch;position:relative;z-index:2}.archive-card p{max-width:38ch;font:500 14px/1.5 "IBM Plex Mono",monospace;position:relative;z-index:2}.archive-card .ghost{position:absolute;right:-.06em;bottom:-.16em;font-family:"Archivo Black",sans-serif;font-size:clamp(145px,19vw,290px);letter-spacing:-.15em;line-height:.7;opacity:.16}.archive-link{width:max-content;padding-bottom:4px;border-bottom:2px solid currentColor;font:700 12px/1 "IBM Plex Mono",monospace;text-transform:uppercase;position:relative;z-index:2}
+    .current{display:grid;grid-template-columns:1.1fr .9fr}.current-copy{padding:clamp(28px,4vw,60px);border-right:var(--light-line);background:var(--emberghost);color:var(--ash)}.current-copy h2{font-family:"Archivo Black",sans-serif;font-size:clamp(52px,7vw,116px);line-height:.75;letter-spacing:-.11em;text-transform:uppercase;max-width:8ch}.current-copy p{max-width:46ch;margin-top:28px;font:500 14px/1.55 "IBM Plex Mono",monospace}.work-list{display:grid}.work-item{padding:20px;min-height:144px;border-bottom:var(--line);display:grid;grid-template-columns:58px 1fr auto;gap:14px;align-items:center;background:var(--ash)}.work-item:last-child{border-bottom:0}.work-item .status{width:42px;height:42px;border-radius:50%;border:var(--line);background:var(--crywave);color:var(--obsidian);display:grid;place-items:center;font:700 11px/1 "IBM Plex Mono",monospace}.work-item h3{font-family:"Archivo Black",sans-serif;font-size:clamp(23px,2.5vw,38px);line-height:.85;letter-spacing:-.07em;text-transform:uppercase}.work-item p{font:500 12px/1.45 "IBM Plex Mono",monospace;color:#444;max-width:38ch}.work-item small{font:600 10px/1.3 "IBM Plex Mono",monospace;text-transform:uppercase;text-align:right;color:var(--witchwine)}
+    .statement{min-height:65vh;padding:clamp(30px,7vw,110px) clamp(18px,5vw,72px);background:var(--witchwine-deep);position:relative;overflow:hidden}.statement::after{content:"3N";position:absolute;right:-.08em;bottom:-.2em;font-family:"Archivo Black",sans-serif;font-size:clamp(250px,45vw,660px);letter-spacing:-.18em;color:var(--clay-sigil);opacity:.28;line-height:.7}.statement h2{position:relative;z-index:2;font-family:"Archivo Black",sans-serif;font-size:clamp(62px,11.3vw,180px);letter-spacing:-.12em;line-height:.72;text-transform:uppercase;max-width:8.7ch;color:var(--ash)}.statement h2::first-line{color:var(--crywave)
